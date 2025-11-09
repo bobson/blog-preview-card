@@ -15,6 +15,10 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ## Overview
 
+### Screenshot
+
+![](./screenshot.png)
+
 ### The challenge
 
 Users should be able to:
