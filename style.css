@@ -1,0 +1,123 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%)
+}
+
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', 'Figtree-Italic', sans-serif;
+
+}
+
+body {
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    border: 1.5px solid var(--gray-950);
+    box-shadow: 8px 8px 0px var(--gray-950);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 380px;
+    gap: 8px;
+}
+
+.card__image {
+    display: block;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    font-size: clamp(0.85rem, .9vw, .95rem)
+}
+
+.card-meta .badge {
+    font-weight: 900;
+    color: var(--gray-950);
+    background-color: var(--yellow);
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.card-meta time {
+    font-weight: 600;
+    color: var(--gray-950);
+
+}
+
+.card-title {
+    font-weight: 900;
+    color: var(--gray-950);
+    margin-bottom: 10px;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+
+}
+
+.card-description {
+    font-weight: 600;
+    color: var(--gray-500);
+    line-height: 1.5;
+    font-size: clamp(0.9rem, 1.1vw, 1rem)
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.card-author__image {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+        /* width: 320px; */
+    }
+
+    .card__image {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+}
