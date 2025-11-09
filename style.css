@@ -84,7 +84,17 @@ body {
     color: var(--gray-950);
     margin-bottom: 10px;
     font-size: clamp(1.3rem, 2vw, 1.5rem);
+    cursor: pointer;
+    transition: all .3 ease;
+}
 
+.card-title:hover {
+    color: var(--yellow);
+}
+
+.card-title a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .card-description {
